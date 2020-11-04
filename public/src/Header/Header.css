@@ -1,0 +1,13 @@
+.Header {
+	display: flex;
+	justify-content: center;
+}
+
+.Header_title {
+	border: 0.3vw solid grey;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-top: 3vw;
+	padding: 1vw 10vw;
+	font-size: 4vw;
+}

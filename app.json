@@ -1,0 +1,7 @@
+{
+	"name": "Pokemons application",
+	"description": "MERN stack project",
+	"repository": "https://github.com/jul4ajka/pokemons_react_node_app",
+	"keywords": ["MySQL",  "express", "react", "node"],
+	"image": "heroku/nodejs"
+}

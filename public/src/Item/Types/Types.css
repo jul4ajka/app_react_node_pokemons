@@ -1,0 +1,119 @@
+.Types_item_grass {
+		border: 1px solid green;
+		border-radius: 0.4vw;
+		background-color: lightgreen;
+		margin-right: 0.5vw;
+		padding: 0.3vw;
+		font-weight: 600;
+		text-transform: capitalize;
+}
+
+.Types_item_poison {
+  	border: 1px solid violet;
+		border-radius: 0.4vw;
+		background-color:violet;
+		padding: 0.3vw;
+		margin-right: 0.5vw;
+		font-weight: 600;
+		text-transform: capitalize;
+}
+
+.Types_item_fire {
+	  border: 1px solid red;
+		border-radius: 0.4vw;
+		background-color:red;
+		padding: 0.3vw;
+		margin-right: 0.5vw;
+		font-weight: 600;
+		text-transform: capitalize;
+}
+
+.Types_item_normal {
+	border: 1px solid coral;
+	border-radius: 0.4vw;
+	background-color:coral;
+	padding: 0.3vw;
+	margin-right: 0.5vw;
+	font-weight: 600;
+	text-transform: capitalize;
+}
+
+.Types_item_fighting {
+	border: 1px solid blue;
+	border-radius: 0.4vw;
+	background-color:blue;
+	padding: 0.3vw;
+	margin-right: 0.5vw;
+	font-weight: 600;
+	text-transform: capitalize;
+}
+
+.Types_item_flying {
+	border: 1px solid lightcyan;
+	border-radius: 0.4vw;
+	background-color:lightcyan;
+	padding: 0.3vw;
+	margin-right: 0.5vw;
+	font-weight: 600;
+	text-transform: capitalize;
+}
+
+.Types_item_ground {
+	border: 1px solid brown;
+	border-radius: 0.4vw;
+	background-color:brown;
+	padding: 0.3vw;
+	margin-right: 0.5vw;
+	font-weight: 600;
+	text-transform: capitalize;
+}
+
+.Types_item_rock {
+	border: 1px solid grey;
+	border-radius: 0.4vw;
+	background-color:grey;
+	padding: 0.3vw;
+	margin-right: 0.5vw;
+	font-weight: 600;
+	text-transform: capitalize;
+}
+
+.Types_item_bug {
+	border: 1px solid pink;
+	border-radius: 0.4vw;
+	background-color:pink;
+	padding: 0.3vw;
+	margin-right: 0.5vw;
+	font-weight: 600;
+	text-transform: capitalize;
+}
+
+.Types_item_ghost {
+	border: 1px solid lightgray;
+	border-radius: 0.4vw;
+	background-color:lightgray;
+	padding: 0.3vw;
+	margin-right: 0.5vw;
+	font-weight: 600;
+	text-transform: capitalize;
+}
+
+.Types_item_steel  {
+	border: 1px solid rgb(44, 41, 41);
+	border-radius: 0.4vw;
+	background-color:rgb(44, 41, 41);
+	padding: 0.3vw;
+	margin-right: 0.5vw;
+	font-weight: 600;
+	text-transform: capitalize;	
+}
+
+.Types_item_default {
+	border: 1px solid yellow;
+	border-radius: 0.4vw;
+	background-color:yellow;
+	padding: 0.3vw;
+	margin-right: 0.5vw;
+	font-weight: 600;
+	text-transform: capitalize;	
+}
