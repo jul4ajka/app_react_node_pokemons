@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({
 //Усі адреси регулюються з index.html
 
 app.get('*', function (req, res) {
-	res.sendFile(__dirname + '/public/public/index.html');
+	res.sendFile(__dirname + '/public/build/index.html');
 });
 
 app.listen(port, () => {
