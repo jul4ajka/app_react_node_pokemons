@@ -9,9 +9,10 @@ app.use(bodyParser.urlencoded({
     'extended': 'true'
 }))
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+//Усі адреси регулюються з index.html
+app.get('*', function (req, res) {
+	res.sendFile(__dirname + '/public/build/index.html');
+});
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
