@@ -8,14 +8,14 @@
 }
 
 .Pokemon_image {
-	width: 10vw;
+	width: 8vw;
 }
 
 
 table, th, td {
 	border: 1px solid black;
 	border-collapse: collapse;
-	margin: 2vw;
+	margin: 1vw;
 }
 
 .Pokemon_table td {

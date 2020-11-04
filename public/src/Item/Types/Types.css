@@ -6,6 +6,7 @@
 		padding: 0.3vw;
 		font-weight: 600;
 		text-transform: capitalize;
+		font-size: 2vw;
 }
 
 .Types_item_poison {
@@ -16,6 +17,7 @@
 		margin-right: 0.5vw;
 		font-weight: 600;
 		text-transform: capitalize;
+		font-size: 2vw;
 }
 
 .Types_item_fire {
@@ -26,6 +28,7 @@
 		margin-right: 0.5vw;
 		font-weight: 600;
 		text-transform: capitalize;
+		font-size: 2vw;
 }
 
 .Types_item_normal {
@@ -36,6 +39,7 @@
 	margin-right: 0.5vw;
 	font-weight: 600;
 	text-transform: capitalize;
+	font-size: 2vw;
 }
 
 .Types_item_fighting {
@@ -46,6 +50,7 @@
 	margin-right: 0.5vw;
 	font-weight: 600;
 	text-transform: capitalize;
+	font-size: 2vw;
 }
 
 .Types_item_flying {
@@ -56,6 +61,7 @@
 	margin-right: 0.5vw;
 	font-weight: 600;
 	text-transform: capitalize;
+	font-size: 2vw;
 }
 
 .Types_item_ground {
@@ -66,6 +72,7 @@
 	margin-right: 0.5vw;
 	font-weight: 600;
 	text-transform: capitalize;
+	font-size: 2vw;
 }
 
 .Types_item_rock {
@@ -76,6 +83,7 @@
 	margin-right: 0.5vw;
 	font-weight: 600;
 	text-transform: capitalize;
+	font-size: 2vw;
 }
 
 .Types_item_bug {
@@ -86,6 +94,7 @@
 	margin-right: 0.5vw;
 	font-weight: 600;
 	text-transform: capitalize;
+	font-size: 2vw;
 }
 
 .Types_item_ghost {
@@ -96,6 +105,7 @@
 	margin-right: 0.5vw;
 	font-weight: 600;
 	text-transform: capitalize;
+	font-size: 2vw;
 }
 
 .Types_item_steel  {
@@ -106,6 +116,7 @@
 	margin-right: 0.5vw;
 	font-weight: 600;
 	text-transform: capitalize;	
+	font-size: 2vw;
 }
 
 .Types_item_default {
@@ -116,4 +127,5 @@
 	margin-right: 0.5vw;
 	font-weight: 600;
 	text-transform: capitalize;	
+	font-size: 2vw;
 }
