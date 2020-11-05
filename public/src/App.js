@@ -33,7 +33,8 @@ class App extends Component {
 					pokemonsCopy[i].types = sprites.types;
 					
 					this.setState({
-						pokemonsArr: pokemonsCopy
+						pokemonsArr: pokemonsCopy,
+						filtered: pokemonsCopy
 					})
 				})
 			}
@@ -41,8 +42,8 @@ class App extends Component {
 	}
 
 	loadMore = () => {
-			this.getPokemons(this.state.nextArr);
 			try {
+				this.getPokemons(this.state.nextArr);
 				this.setState((previousState) => ({
 					pokemonsArr: previousState.filtered
 				}))
@@ -73,7 +74,6 @@ class App extends Component {
 				pokemonsArr: previousState.filtered
 			}))
 		} else if ( this.state.filtered && this.state.pokemonsArr.length <= 12) {
-			
 			let filter = this.state.filtered.filter((pokemon) =>
 			pokemon.types.length === 1 ? 
 			pokemon.types[0].type.name === value.toLowerCase() : 
