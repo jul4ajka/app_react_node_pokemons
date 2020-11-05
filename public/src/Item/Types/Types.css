@@ -1,34 +1,43 @@
+.Types {
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
 .Types_item_grass {
-		border: 1px solid green;
-		border-radius: 0.4vw;
-		background-color: lightgreen;
-		margin-right: 0.5vw;
-		padding: 0.3vw;
-		font-weight: 600;
-		text-transform: capitalize;
-		font-size: 1.5vw;
+	border: 1px solid green;
+	border-radius: 0.4vw;
+	background-color: lightgreen;
+	margin-right: 0.5vw;
+	padding: 0.3vw;
+	font-weight: 600;
+	text-transform: capitalize;
+	font-size: 1.5vw;
+	height: 2vw;
 }
 
 .Types_item_poison {
-  	border: 1px solid violet;
-		border-radius: 0.4vw;
-		background-color:violet;
-		padding: 0.3vw;
-		margin-right: 0.5vw;
-		font-weight: 600;
-		text-transform: capitalize;
-		font-size: 1.5vw;
+	border: 1px solid violet;
+	border-radius: 0.4vw;
+	background-color:violet;
+	padding: 0.3vw;
+	margin-right: 0.5vw;
+	font-weight: 600;
+	text-transform: capitalize;
+	font-size: 1.5vw;
+	height: 2vw;
 }
 
 .Types_item_fire {
-	  border: 1px solid red;
-		border-radius: 0.4vw;
-		background-color:red;
-		padding: 0.3vw;
-		margin-right: 0.5vw;
-		font-weight: 600;
-		text-transform: capitalize;
-		font-size: 1.5vw;
+	border: 1px solid red;
+	border-radius: 0.4vw;
+	background-color:red;
+	padding: 0.3vw;
+	margin-right: 0.5vw;
+	font-weight: 600;
+	text-transform: capitalize;
+	font-size: 1.5vw;
+	height: 2vw;
 }
 
 .Types_item_normal {
@@ -40,6 +49,7 @@
 	font-weight: 600;
 	text-transform: capitalize;
 	font-size: 1.5vw;
+	height: 2vw;
 }
 
 .Types_item_fighting {
@@ -51,6 +61,7 @@
 	font-weight: 600;
 	text-transform: capitalize;
 	font-size: 1.5vw;
+	height: 2vw;
 }
 
 .Types_item_flying {
@@ -62,6 +73,7 @@
 	font-weight: 600;
 	text-transform: capitalize;
 	font-size: 1.5vw;
+	height: 2vw;
 }
 
 .Types_item_ground {
@@ -73,6 +85,7 @@
 	font-weight: 600;
 	text-transform: capitalize;
 	font-size: 1.5vw;
+	height: 2vw;
 }
 
 .Types_item_rock {
@@ -84,6 +97,7 @@
 	font-weight: 600;
 	text-transform: capitalize;
 	font-size: 1.5vw;
+	height: 2vw;
 }
 
 .Types_item_bug {
@@ -95,6 +109,7 @@
 	font-weight: 600;
 	text-transform: capitalize;
 	font-size: 1.5vw;
+	height: 2vw;
 }
 
 .Types_item_ghost {
@@ -106,6 +121,7 @@
 	font-weight: 600;
 	text-transform: capitalize;
 	font-size: 1.5vw;
+	height: 2vw;
 }
 
 .Types_item_steel  {
@@ -117,6 +133,7 @@
 	font-weight: 600;
 	text-transform: capitalize;	
 	font-size: 1.5vw;
+	height: 2vw;
 }
 
 .Types_item_default {
@@ -128,4 +145,5 @@
 	font-weight: 600;
 	text-transform: capitalize;	
 	font-size: 1.5vw;
+	height: 2vw;
 }

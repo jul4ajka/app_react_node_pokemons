@@ -11,7 +11,7 @@ class App extends Component {
 			nextArr: 'https://pokeapi.co/api/v2/pokemon?limit=12',
 			pokemonInfo: {},
 			showPokemon: false,
-			filtered: false
+			filtered: null
 	}
 
 	getPokemons = (url) => {
@@ -42,6 +42,15 @@ class App extends Component {
 
 	loadMore = () => {
 			this.getPokemons(this.state.nextArr);
+			try {
+				this.setState((previousState) => ({
+					pokemonsArr: previousState.filtered
+				}))
+			} catch  {
+				this.setState({
+					filtered: []
+				})
+			}	
 	}
 
 	showItem = (url) =>  {
@@ -59,7 +68,7 @@ class App extends Component {
 	filterItem = (event) => {
 		let value = event.target.value
 		
-		if (value === 'Choose to filter') {
+		if (value === 'Select all') {
 			this.setState((previousState) => ({
 				pokemonsArr: previousState.filtered
 			}))
@@ -101,7 +110,7 @@ class App extends Component {
 				<header className="Header_wraper">
 						<Header />
 						<select onChange={this.filterItem}>
-							<option>Choose to filter</option>
+							<option>Select all</option>
 							<option>Fire</option>
 							<option>Bug</option>
 							<option>Water</option>
