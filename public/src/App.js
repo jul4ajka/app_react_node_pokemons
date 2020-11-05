@@ -8,20 +8,21 @@ import Pokemon from './Pokemon/Pokemon';
 class App extends Component {
 	state = {
 			pokemonsArr: [],
+			pokemonsMiddle: [],
 			nextArr: 'https://pokeapi.co/api/v2/pokemon?limit=12',
 			pokemonInfo: {},
 			showPokemon: false,
-			filtered: null
+			filtered: false 
 	}
 
 	getPokemons = (url) => {
 		fetch(url)
 		.then(response => response.json())
 		.then(pokemons => {
-			this.setState((previousState) => ({
-				pokemonsArr: previousState.pokemonsArr.concat(pokemons.results),
+			this.setState({
+				pokemonsArr: pokemons.results,
 				nextArr: pokemons.next
-			}))
+			})
 			
 			for (let i = 0; i < this.state.pokemonsArr.length; i++) {
 				fetch(this.state.pokemonsArr[i].url)
@@ -42,16 +43,36 @@ class App extends Component {
 	}
 
 	loadMore = () => {
-			try {
-				this.getPokemons(this.state.nextArr);
-				this.setState((previousState) => ({
-					pokemonsArr: previousState.filtered
-				}))
-			} catch  {
+	
+			fetch(this.state.nextArr)
+			.then(response => response.json())
+			.then(pokemons => {
 				this.setState({
-					filtered: []
+					pokemonsMiddle: pokemons.results,
+					nextArr: pokemons.next
 				})
-			}	
+				
+				for (let i = 0; i < this.state.pokemonsMiddle.length; i++) {
+					fetch(this.state.pokemonsMiddle[i].url)
+					.then(response => response.json())
+					.then(sprites => {
+						let pokemonsCopy = this.state.pokemonsMiddle;
+						
+						pokemonsCopy[i].image = sprites.sprites.front_default;
+						pokemonsCopy[i].types = sprites.types;
+
+						this.setState({
+							pokemonsMiddle: pokemonsCopy
+						})
+					})
+				}
+				
+				this.setState({
+					filtered: this.state.filtered.concat(this.state.pokemonsMiddle),
+					pokemonsArr: this.state.filtered.concat(this.state.pokemonsMiddle)
+				})
+				console.log(this.state.filtered)
+		})
 	}
 
 	showItem = (url) =>  {
@@ -73,7 +94,8 @@ class App extends Component {
 			this.setState((previousState) => ({
 				pokemonsArr: previousState.filtered
 			}))
-		} else if ( this.state.filtered && this.state.pokemonsArr.length <= 12) {
+		} else if (this.state.filtered) {
+			console.log(this.state.filtered)
 			let filter = this.state.filtered.filter((pokemon) =>
 			pokemon.types.length === 1 ? 
 			pokemon.types[0].type.name === value.toLowerCase() : 
@@ -93,10 +115,8 @@ class App extends Component {
 			|| pokemon.types[1].type.name === value.toLowerCase())
 
 			this.setState({
-				filtered: this.state.pokemonsArr,
-				pokemonsArr: filter	
+				pokemonsArr: filter
 			})
-
 		}	
 	}
 	
