@@ -38,10 +38,18 @@
 	 padding: 1.8vw;
  }
 
- select {
-	height: 3vw;
-	width: 15vw;
-	background-color: lightblue;
+ .SelectPokemonsType {
+	height: 3.5vw;
+	width: 17vw;
+	background-color: lightcoral;
 	font-size: 2vw;
 	margin-top: 2vw;
+	border: none;
+	border-radius: 10px;
+	padding-left: 1.5vw;
+	padding-right: 1.5vw;
+ }
+
+ .SelectPokemonsType option {
+	 border-bottom: 1px solid red;
  }

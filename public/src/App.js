@@ -1,8 +1,9 @@
-import React, {Component} from 'react';
-import './App.css';
-import Header from './Header/Header';
-import Item from './Item/Item';
-import Pokemon from './Pokemon/Pokemon';
+import React, {Component} from 'react'
+import './App.css'
+import Header from './Header/Header'
+import Item from './Item/Item'
+import Pokemon from './Pokemon/Pokemon'
+import Options from './Options/Options'
 
 
 class App extends Component {
@@ -12,7 +13,8 @@ class App extends Component {
 			nextArr: 'https://pokeapi.co/api/v2/pokemon?limit=12',
 			pokemonInfo: {},
 			showPokemon: false,
-			filtered: false 
+			filtered: false,
+			allTypes: []
 	}
 
 	getPokemons = (url) => {
@@ -71,7 +73,6 @@ class App extends Component {
 					filtered: this.state.filtered.concat(this.state.pokemonsMiddle),
 					pokemonsArr: this.state.filtered.concat(this.state.pokemonsMiddle)
 				})
-				console.log(this.state.filtered)
 		})
 	}
 
@@ -95,7 +96,7 @@ class App extends Component {
 				pokemonsArr: previousState.filtered
 			}))
 		} else if (this.state.filtered) {
-			console.log(this.state.filtered)
+			
 			let filter = this.state.filtered.filter((pokemon) =>
 			pokemon.types.length === 1 ? 
 			pokemon.types[0].type.name === value.toLowerCase() : 
@@ -119,9 +120,20 @@ class App extends Component {
 			})
 		}	
 	}
+
+	getAllTypes = () => {
+		fetch('http://pokeapi.co/api/v2/type/?limit=999')
+		.then(response => response.json())
+		.then(types => {
+			this.setState({
+				allTypes: types.results
+			})
+		})
+	}
 	
 	componentDidMount() {
-		this.getPokemons(this.state.nextArr);
+		this.getPokemons(this.state.nextArr)
+		this.getAllTypes()
 	}
 		
 	render() {
@@ -129,17 +141,15 @@ class App extends Component {
 			<div className="App">
 				<header className="Header_wraper">
 						<Header />
-						<select onChange={this.filterItem}>
+						<select onChange={this.filterItem} className={'SelectPokemonsType'}>
 							<option>Select all</option>
-							<option>Fire</option>
-							<option>Bug</option>
-							<option>Water</option>
-							<option>Grass</option>
-							<option>Normal</option>
-							<option>Poison</option>
-							<option>Electric</option>
-							<option>Flying</option>
-							<option>Fairy</option>
+							{
+								this.state.allTypes.map((type, index) => {
+									return(
+										<Options type={type.name} key={index}/>
+									)
+								})
+							}
 						</select>
 				</header>
 				<div className="Section_wrapper">
