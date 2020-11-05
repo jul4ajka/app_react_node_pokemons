@@ -122,7 +122,7 @@ class App extends Component {
 	}
 
 	getAllTypes = () => {
-		fetch('http://pokeapi.co/api/v2/type/?limit=999')
+		fetch('https://pokeapi.co/api/v2/type/?limit=999')
 		.then(response => response.json())
 		.then(types => {
 			this.setState({
