@@ -29,3 +29,22 @@
 	padding-left: 0.5vw;
 }
 
+
+@media screen and (max-width: 768px) {
+	.Item {
+		width: 50vw;
+		height: 58vw;
+		border: 0.3vw solid gray;
+		margin: 3vw;
+	}
+
+	.Item_img {
+		width: 33vw;
+	}
+
+	.Item_name {
+		font-size: 6vw;
+		margin-bottom: 3vw;
+	}
+}
+

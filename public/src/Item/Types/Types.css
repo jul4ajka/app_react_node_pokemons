@@ -145,5 +145,16 @@
 	font-weight: 600;
 	text-transform: capitalize;	
 	font-size: 1.5vw;
-	height: 2vw;
+	height: 2vw; 
+}
+
+@media screen and (max-width: 768px) { 
+	.Types_item_grass, .Types_item_poison, .Types_item_fire,
+	.Types_item_normal, .Types_item_fighting, .Types_item_flying,
+	.Types_item_ground, .Types_item_rock, .Types_item_bug, 
+	.Types_item_ghost,  .Types_item_steel, .Types_item_default {
+		font-size: 4vw;
+		height: 6vw;
+	}
+
 }
